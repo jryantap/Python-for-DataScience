@@ -167,19 +167,29 @@ pop = data['population']
 col = data['cont'].map(continent_colors)
 
 # Scatter plot
-plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c = col, alpha = 0.8)
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) / 200000, c = col, alpha = 0.8)
 
 
 # Previous customizations
-plt.xscale('log') 
-plt.xlabel('GDP per Capita [in USD]')
-plt.ylabel('Life Expectancy [in years]')
-plt.title('World Development in 2007')
-plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+# plt.xscale('log') 
+# plt.xlabel('GDP per Capita [in USD]')
+# plt.ylabel('Life Expectancy [in years]')
+# plt.title('World Development in 2007')
+# plt.xticks([1000,10000,100000], ['1k','10k','100k'])
 
-# Additional customizations
-plt.text(1550, 71, 'India')
-plt.text(5700, 80, 'China')
+# # Additional customizations
+# plt.text(1550, 71, 'India')
+# plt.text(5700, 80, 'China')
+
+# Add axis limits to fix display
+plt.xlim(200, 100000)
+plt.ylim(30, 90)
+
+# Add country labels at actual coordinates
+india = data[data['country'] == 'India']
+china = data[data['country'] == 'China']
+plt.text(india['gdp_cap'].values[0], india['life_exp'].values[0], 'India')
+plt.text(china['gdp_cap'].values[0], china['life_exp'].values[0], 'China')
 
 # Add grid() call
 plt.grid(True)
