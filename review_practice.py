@@ -8,4 +8,3 @@ print(type(? (bool("1"))))
 x = "python" + "excercise"
 x.capitalize
 # Answer: 
-
