@@ -182,14 +182,14 @@ plt.text(1550, 71, 'India')
 plt.text(5700, 80, 'China')
 
 # Add axis limits to fix display
-# plt.xlim(200, 100000)
-# plt.ylim(30, 90)
+plt.xlim(200, 100000)
+plt.ylim(30, 90)
 
 # Add country labels at actual coordinates
-# india = data[data['country'] == 'India']
-# china = data[data['country'] == 'China']
-# plt.text(india['gdp_cap'].values[0], india['life_exp'].values[0], 'India')
-# plt.text(china['gdp_cap'].values[0], china['life_exp'].values[0], 'China')
+india = data[data['country'] == 'India']
+china = data[data['country'] == 'China']
+plt.text(india['gdp_cap'].values[0], india['life_exp'].values[0], 'India')
+plt.text(china['gdp_cap'].values[0], china['life_exp'].values[0], 'China')
 
 # Add grid() call
 plt.grid(True)
