@@ -24,3 +24,21 @@ print(brics[is_huge])
 
 # 4. do it in one line
 print(brics[brics.loc[:, "area"]>8])
+
+###================================
+# Import cars data
+import pandas as pd
+import numpy as np
+
+cars = pd.read_csv('cars.csv', index_col = 0)
+# Create car_maniac: observations that have a cars_per_cap over 500
+cpc = cars["cars_per_cap"]
+
+many_cars = cpc > 500
+car_maniac = cars[many_cars]
+
+# Print car_maniac
+print(car_maniac)
+
+#one line
+print(cars[cars["cars_per_cap"] > 500])
