@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-#load the data
+#load the data 
 from io import StringIO
 
 data_str = """country,year,population,cont,life_exp,gdp_cap
@@ -166,7 +166,7 @@ life_exp = data['life_exp']
 pop = data['population']
 col = data['cont'].map(continent_colors)
 
-# Scatter plot
+# Scatter plot the "/200000" is to make the bubble smaller for China and India since they bigger numbers
 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) / 200000, c = col, alpha = 0.8)
 
 
