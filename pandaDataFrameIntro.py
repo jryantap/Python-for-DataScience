@@ -22,3 +22,9 @@ cars.index = row_labels
 # Printer cars again, this time with the row labels
 print (cars)
 
+# OR do the following
+# import pandas as pd
+# Import the cars.csv data: cars
+# cars = pd.read_csv("cars.csv")
+# # Print out cars
+# print (cars)
