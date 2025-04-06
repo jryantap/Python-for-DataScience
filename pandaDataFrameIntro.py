@@ -12,5 +12,13 @@ my_dict = {"country": names, "drives_right": dr, "cars_per_cap": cpc}
 # Build a DataFrame cars from my_dict: cars
 cars = pd.DataFrame(my_dict)
 
-# Print cars
+# Print cars, just row labels as index for now to make sure parse is ok. 
 print(cars) 
+
+# Specify the row labels this time
+row_labels = ['US', 'AUS', 'JPN', 'IN', 'RUS', 'MOR', 'EG']
+cars.index = row_labels
+
+# Printer cars again, this time with the row labels
+print (cars)
+
