@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 
 
 #generate random numbers
-life_exp_example = np.random.rand(100)
-print(life_exp_example)
+life_exp_ints = np.random.randint(1, 101, size=50)
+life_exp_floats = np.random.rand(50)
+life_mixed_floats_ints = np.column_stack((life_exp_ints, life_exp_floats))
+#shuffle the list
+np.random.shuffle(life_mixed_floats_ints)
+print(life_mixed_floats_ints)
 
 life_exp = [43.828, 
             76.423, 
