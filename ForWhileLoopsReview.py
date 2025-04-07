@@ -27,3 +27,9 @@ while offset != 0 :
     else : 
       offset = offset+1     
     print(offset)
+
+#=========== loops for Dictionary and NumPy array ====
+# Dictionary
+# for key, val in my_dict.items() :
+# NumPy array
+# for val in np.nditer(my_array):
