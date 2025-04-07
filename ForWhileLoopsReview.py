@@ -14,6 +14,7 @@ for h in house:
     name_of_area = h[1]
     print("the " + name_of_room + " is " + str(name_of_area) + " in sqm")
 
+#=============WHILE LOOP REVIEW=============
 # Initialize offset
 offset = -6
 
