@@ -1,3 +1,4 @@
+#==============for loop review===============
 #Loop over list of lists example 
 house = [["hallway", 11.25], 
          ["kitchen", 18.0], 
