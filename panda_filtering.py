@@ -22,7 +22,7 @@ is_huge = brics["area"] > 8
 # 3. Use the result to select the countries
 print(brics[is_huge])
 
-# 4. do it in one line
+# 4. do it in one line, check the column "area"
 print(brics[brics.loc[:, "area"]>8])
 
 ###================================
@@ -41,4 +41,6 @@ car_maniac = cars[many_cars]
 print(car_maniac)
 
 #one line
-print(cars[cars["cars_per_cap"] > 500])
+print(cars[cars["cars_per_cap"] > 500])  #same output.
+#OR
+print(cars[cars.loc[ :, "cars_per_cap"] > 500])
