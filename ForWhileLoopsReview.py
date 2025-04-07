@@ -47,9 +47,27 @@ for key, value in europe.items() :
 import numpy as np
 
 # For loop over np_height
-for x in np_height :
-    print(str(x) + " inches")
+# for x in np_height :
+#     print(str(x) + " inches")
 
-# For loop over np_baseball
-for x in np.nditer(np_baseball) :  # 2D array
-    print(x)
+# # For loop over np_baseball
+# for x in np.nditer(np_baseball) :  # 2D array
+#     print(x)
+
+#===== Loop over DataFrame ======
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Iterate over rows of cars
+for lab, row in cars.iterrows() :
+    print (lab)
+    print (row)
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Adapt for loop
+for lab, row in cars.iterrows() :
+    print(lab + ": " + str(row['cars_per_cap']))
