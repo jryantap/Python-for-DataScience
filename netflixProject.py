@@ -10,5 +10,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#read the file
+netflix_df = pd.read_csv("netflix_data.csv")
+
+##test print first##
+print(netflix_df)
+
 
 
