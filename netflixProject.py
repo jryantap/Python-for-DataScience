@@ -13,8 +13,10 @@ import matplotlib.pyplot as plt
 #read the file
 netflix_df = pd.read_csv("netflix_data.csv")
 
-##test print first##
-print(netflix_df)
+# ##test print first##
+# print(netflix_df) #print ok
 
-
-
+### 1. What was the most frequent movie duration in the 1990s? Save an approximate answer as an integer called duration (use 1990 as the decade's start year).
+# get 1990s column
+release_year = netflix_df['release_year'] 
+print(release_year)
