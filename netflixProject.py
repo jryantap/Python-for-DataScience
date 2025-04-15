@@ -18,12 +18,13 @@ netflix_df = pd.read_csv("netflix_data.csv")
 
 ### 1. What was the most frequent movie duration in the 1990s? Save an approximate answer as an integer called duration (use 1990 as the decade's start year).
 # get 1990s column
-release_year = netflix_df[netflix_df["release_year"] == "1990"]
+# release_year = netflix_df[(netflix_df["release_year"] > 1990) & (netflix_df["release_year"] < 2000)]
 
 
-# #visualize the distribution
-# plt.plot(release_year)
-# plt.show()
+release_year = netflix_df[(netflix_df["release_year"] > 1990) & (netflix_df["release_year"] < 2000)]
+print(release_year)
 
 
-
+#visualize the distribution
+plt.hist(release_year)
+plt.show()
