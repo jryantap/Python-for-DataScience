@@ -25,8 +25,11 @@ release_year = netflix_df[(netflix_df["release_year"] > 1990) & (netflix_df["rel
 print(release_year)
 
 
-#visualize the distribution
-plt.hist(release_year)
+#visualize the distribution, set how wide the bars are
+plt.hist(release_year["duration"], bins=50, edgecolor='black')
+plt.title("Distribution of Movie Durations in the 1990s")
+plt.xlabel("Duration(in minutes)")
+plt.ylabel("Frequency")
 plt.show()
 
 #=====================================
@@ -36,5 +39,6 @@ plt.show()
 # short_movie_count = netflix_df[netflix_df["duration"] < 90]
 # print(short_movie_count)
 
-movie_df = netflix_df[(netflix_df["genre"] == "Action")]
-print(movie_df)
+#get column "genre" with only "action"
+# movie_df = netflix_df[(netflix_df["genre"] == "Action")]
+
