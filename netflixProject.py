@@ -31,4 +31,10 @@ plt.show()
 
 #=====================================
 # 2. A movie is considered short if it is less than 90 minutes. Count the number of short action movies released in the 1990s and save this integer as short_movie_count.
-short_movie_count = netflix_df[netflix_df["duration"] < 90]
+
+
+# short_movie_count = netflix_df[netflix_df["duration"] < 90]
+# print(short_movie_count)
+
+movie_df = netflix_df[(netflix_df["genre"] == "Action")]
+print(movie_df)
