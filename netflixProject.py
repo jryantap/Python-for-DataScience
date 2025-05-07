@@ -71,7 +71,7 @@ subset = netflix_subset[(netflix_subset["release_year"] >= 1990)]
 movies_1990s = subset[(subset["release_year"] < 2000)]
 
 # Another way to do this step is to use the & operator which allows you to do this type of filtering in one step
-# movies_1990s = netflix_subset[(netflix_subset["release_year"] >= 1990) & (netflix_subset["release_year"] < 2000)]
+movies_1990s = netflix_subset[(netflix_subset["release_year"] >= 1990) & (netflix_subset["release_year"] < 2000)]
 
 # Visualize the duration column of your filtered data to see the distribution of movie durations
 # See which bar is the highest and save the duration value, this doesn't need to be exact!
