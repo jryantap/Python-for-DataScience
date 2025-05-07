@@ -102,6 +102,6 @@ for label, row in action_movies_1990s.iterrows() :
 print("Number of short action movies in the 1990s: ", short_movie_count)
 
 # A quicker way of counting values in a column is to use .sum() on the desired column
-# (action_movies_1990s["duration"] < 90).sum()
+(action_movies_1990s["duration"] < 90).sum()
 
 #==============================================
