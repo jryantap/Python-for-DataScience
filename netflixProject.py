@@ -39,18 +39,18 @@ plt.show()
 # # 2. A movie is considered short if it is less than 90 minutes. Count the number of short action movies released in the 1990s and save this integer as short_movie_count.
 
 
-# short_movie_count = netflix_df[netflix_df["duration"] < 90]
-# print(short_movie_count)
+short_movie_count = netflix_df[netflix_df["duration"] < 90]
+print(short_movie_count)
 
-# # #get column "genre" with only "action"
-# movie_df = netflix_df[(netflix_df["genre"] == "Action")]
+# #get column "genre" with only "action"
+movie_df = netflix_df[(netflix_df["genre"] == "Action")]
 
-# # Filter 1990s movies (inclusive 1990–1999)
-# movies_90s = netflix_df[(netflix_df["release_year"] >= 1990) & (netflix_df["release_year"] <= 1999)]
+# Filter 1990s movies (inclusive 1990–1999)
+movies_90s = netflix_df[(netflix_df["release_year"] >= 1990) & (netflix_df["release_year"] <= 1999)]
 
-# # Find the most frequent duration
-# duration = int(movies_90s["duration"].mode()[0])
-# print("Most frequent duration:", duration)
+# Find the most frequent duration
+duration = int(movies_90s["duration"].mode()[0])
+print("Most frequent duration:", duration)
 
 #=====================================
 # Importing pandas and matplotlib
