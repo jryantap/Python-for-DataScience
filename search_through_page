@@ -1,4 +1,4 @@
-### script that will search through website keyword. 
+# script that will search through website keyword. 
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
