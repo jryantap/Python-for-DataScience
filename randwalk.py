@@ -1,5 +1,6 @@
 # Initialization
 random_walk = [0]
+np = [0]
 
 for x in range(100) :
     step = random_walk[-1]
