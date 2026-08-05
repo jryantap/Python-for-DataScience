@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
 # set keywords here for now, hard coded.
-KEYWORDS = ["MyChart", Anesthesia, "missing CI", "Cisco AnyConnect"]
+KEYWORDS = ["MyChart", "Anesthesia", "missing CI", "Cisco AnyConnect"]
 
 # Plans
 # get the website page
@@ -13,3 +13,4 @@ KEYWORDS = ["MyChart", Anesthesia, "missing CI", "Cisco AnyConnect"]
 
 
 
+ 
