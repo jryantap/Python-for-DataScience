@@ -22,6 +22,9 @@ input ("Login to the dashboard and press Enter once done." )
 # create a list to store matches
 matches = []
 
+#find the elements here in the page
+rows = driver.find_elements(By.XPATH, "//tr") 
 
+# loop through the rows and check for keywords
 
  
