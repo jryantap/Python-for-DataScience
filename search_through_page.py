@@ -1,4 +1,5 @@
 # script that will search through a ServiceNow page for specific keywords
+# "potential outage"
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
