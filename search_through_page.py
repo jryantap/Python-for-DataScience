@@ -14,7 +14,7 @@ KEYWORDS = ["MyChart", "Anesthesia", "missing CI", "Cisco AnyConnect"]
 
 # get the website page 
 driver = webdriver.Chrome()
-driver.get("http://example.com") #should be the direct link for the ServiceNow page
+driver.get("http://example.com") #should be the direct link for the ServiceNow page or any page appropriate for the seach
 
 # must login to the dashboard with user's credentials then get prompted 
 # this is the prompt 
@@ -27,5 +27,23 @@ matches = []
 rows = driver.find_elements(By.XPATH, "//tr") 
 
 # loop through the rows and check for keywords
+# (still testing, not sure if this will work, but it should)
 
- 
+for row in rows:  #go through each row that selenium found
+    row_text = row.text.strip()   # remove extra spaces and newlines
+
+    # check if any of the keywords are in the row text
+    if not row_text:  # skip empty rows
+        continue # this will skip the rest of the loop and go to the next row
+
+    # make all of them lower case if found
+    row_text_lower = row_text.lower()
+
+    # store them 
+    found_keywords = []
+
+    for keyword in KEYWORDS:  # check every keyword in the list
+
+        if keyword.lower() in row_text_lower:  # check if the keyword is in the row text
+            found_keywords.append(keyword)  # add the found keyword to the list
+
