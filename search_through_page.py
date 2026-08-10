@@ -53,3 +53,12 @@ for row in rows:  #go through each row that selenium found
         matches.append((row_text, row_text))  # store the row text and the found keywords
 
         #plan:  possibly highlight the row in the page, but not sure how to do that yet.  Will have to look into it.  Maybe use javascript to change the background color of the row.   
+
+        driver.execute_script(""""
+                              arguments[0].style.outline = '3px solid yellow';
+                              arguments[0].style.backgroundColor = 'yellow';
+                              """, row)
+
+#print the matches found
+
+        
