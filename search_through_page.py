@@ -47,3 +47,9 @@ for row in rows:  #go through each row that selenium found
         if keyword.lower() in row_text_lower:  # check if the keyword is in the row text
             found_keywords.append(keyword)  # add the found keyword to the list
 
+# when keywords are found, store the row text and the keywords found in the matches list
+
+    if found_keywords:  # if any keywords were found
+        matches.append((row_text, row_text))  # store the row text and the found keywords
+
+        #plan:  possibly highlight the row in the page, but not sure how to do that yet.  Will have to look into it.  Maybe use javascript to change the background color of the row.   
