@@ -1,5 +1,6 @@
-# script that will search through a ServiceNow page for specific keywords
-# "potential outage"
+### script that will search through a ServiceNow page for specific keywords
+### for "potential outage"
+### 
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -8,9 +9,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 # set keywords here for now, hard coded.
 KEYWORDS = ["MyChart", "Anesthesia", "missing CI", "Cisco AnyConnect"]
 
-# Plan:
-# get the website page
-# search all visible table rows on that current page
+### Plan:
+### get the website page
+### search all visible table rows on that current page
 
 # get the website page 
 driver = webdriver.Chrome()
@@ -52,7 +53,8 @@ for row in rows:  #go through each row that selenium found
     if found_keywords:  # if any keywords were found
         matches.append((row_text, row_text))  # store the row text and the found keywords
 
-        #plan:  possibly highlight the row in the page, but not sure how to do that yet.  Will have to look into it.  Maybe use javascript to change the background color of the row.   
+        ####plan:  possibly highlight the row in the page, but not sure how to do that yet.  Will have to look into it.  Maybe use javascript to change the background color of the row.   
+        
 
         driver.execute_script(""""
                               arguments[0].style.outline = '3px solid yellow';
