@@ -62,5 +62,8 @@ for row in rows:  #go through each row that selenium found
                               """, row)
 
 #print the matches found
+print (f"\nFound {len(matches)} maching rows:\n") # I think this is right, have to double check the notation.
 
-        
+## maybe non f-string.
+## print("\nFound " + str(len(matches)) + "matching rows: \n")
+
