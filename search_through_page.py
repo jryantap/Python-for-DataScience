@@ -67,3 +67,27 @@ print (f"\nFound {len(matches)} maching rows:\n") # I think this is right, have 
 ## maybe non f-string.
 ## print("\nFound " + str(len(matches)) + "matching rows: \n")
 
+
+# Go through every match stored inside the "matches" list.
+#
+# enumerate() gives each match a number.
+# start=1 means counting starts at 1 instead of Python's usual 0.
+#
+# Each item inside matches contains TWO things:
+#   1. keywords = the keyword(s) that were found
+#   2. text     = all the text from the matching row
+#
+# "number" receives the counter from enumerate().
+for number, (keywords, text) in enumerate(matches, start=1):
+    print(f"---- Match ---- {number} ----" )
+    print(f"Keywords(s): {', '.join(keywords)}")
+    print(text)
+    print()
+
+# Pause the Python program.
+#
+# The program will wait here until you press Enter.
+# This prevents the Selenium browser from immediately closing
+# after displaying the search results.
+input("Press Enter to close browser....")
+driver.quit()
