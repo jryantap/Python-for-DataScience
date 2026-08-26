@@ -67,4 +67,7 @@ print (f"\nFound {len(matches)} maching rows:\n") # I think this is right, have 
 ## maybe use non f-string.
 ## print("\nFound " + str(len(matches)) + "matching rows: \n")
 
+#Results will be printed in the console, but could also be written to a file if needed.
+### untest at the moment. 
+
 
